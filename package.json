@@ -40,7 +40,7 @@
         ]
     },
     "dependencies": {
-        "@ariadng/sheets": "github:ariadng/sheets"
+        "@ariadng/sheets": "^0.4.0"
     },
     "devDependencies": {
         "@types/node": "^22.0.0",
