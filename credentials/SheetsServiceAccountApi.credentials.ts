@@ -1,5 +1,4 @@
 import type {
-    ICredentialTestRequest,
     ICredentialType,
     INodeProperties,
 } from 'n8n-workflow';
@@ -25,17 +24,6 @@ export class SheetsServiceAccountApi implements ICredentialType {
         },
     ];
 
-    // Note: We don't use authenticate here because the @ariadng/sheets library
-    // handles authentication internally. The credential is just storage.
-
-    // Credential test - validates the JSON structure
-    test: ICredentialTestRequest = {
-        request: {
-            // This is a dummy request - actual validation happens in the node
-            // because @ariadng/sheets handles the JWT creation internally
-            baseURL: 'https://sheets.googleapis.com',
-            url: '/v4/spreadsheets/test-credential-validation',
-            skipSslCertificateValidation: false,
-        },
-    };
+    // Note: Credential validation happens when the node executes.
+    // The @ariadng/sheets library handles JWT auth internally.
 }
