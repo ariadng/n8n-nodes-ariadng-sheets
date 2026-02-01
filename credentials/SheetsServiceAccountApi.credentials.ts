@@ -11,6 +11,25 @@ export class SheetsServiceAccountApi implements ICredentialType {
 
     properties: INodeProperties[] = [
         {
+            displayName: 'OAuth Client ID',
+            name: 'oauthClientId',
+            type: 'string',
+            default: '',
+            required: true,
+            description: 'OAuth 2.0 Client ID from Google Cloud Console. Create a Desktop app credential.',
+        },
+        {
+            displayName: 'OAuth Client Secret',
+            name: 'oauthClientSecret',
+            type: 'string',
+            typeOptions: {
+                password: true,
+            },
+            default: '',
+            required: true,
+            description: 'OAuth 2.0 Client Secret from Google Cloud Console.',
+        },
+        {
             displayName: 'Service Account JSON',
             name: 'serviceAccountJson',
             type: 'string',
