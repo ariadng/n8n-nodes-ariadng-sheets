@@ -1,0 +1,59 @@
+{
+    "name": "n8n-nodes-ariadng-sheets",
+    "version": "0.1.0",
+    "description": "n8n community node for @ariadng/sheets - Google Sheets API client without external SDK",
+    "keywords": [
+        "n8n-community-node-package",
+        "n8n",
+        "google-sheets",
+        "spreadsheet",
+        "automation"
+    ],
+    "license": "MIT",
+    "author": {
+        "name": "Aria Dhanang",
+        "email": "aria@ariadng.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ariadng/n8n-nodes-ariadng-sheets.git"
+    },
+    "main": "dist/nodes/Sheets/Sheets.node.js",
+    "scripts": {
+        "build": "tsc && npm run copy:icons",
+        "copy:icons": "cp -r nodes/Sheets/*.svg dist/nodes/Sheets/ 2>/dev/null || true",
+        "dev": "tsc --watch",
+        "lint": "eslint nodes credentials --ext .ts",
+        "lint:fix": "eslint nodes credentials --ext .ts --fix",
+        "prepublishOnly": "npm run build"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "credentials": [
+            "dist/credentials/SheetsServiceAccountApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/Sheets/Sheets.node.js"
+        ]
+    },
+    "dependencies": {
+        "@ariadng/sheets": "^0.3.4"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "eslint": "^8.57.0",
+        "n8n-workflow": "*",
+        "typescript": "^5.0.0"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

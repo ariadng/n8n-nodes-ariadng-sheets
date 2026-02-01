@@ -1,0 +1,32 @@
+{
+    "node": "n8n-nodes-ariadng-sheets.sheets",
+    "nodeVersion": "1.0",
+    "codexVersion": "1.0",
+    "categories": [
+        "Data & Storage",
+        "Productivity"
+    ],
+    "resources": {
+        "primaryDocumentation": [
+            {
+                "url": "https://github.com/ariadng/sheets"
+            }
+        ],
+        "credentialDocumentation": [
+            {
+                "url": "https://github.com/ariadng/sheets#service-account-authentication"
+            }
+        ]
+    },
+    "alias": [
+        "Google Sheets",
+        "Spreadsheet",
+        "Excel",
+        "CSV"
+    ],
+    "subcategories": {
+        "Data & Storage": [
+            "Spreadsheet"
+        ]
+    }
+}
